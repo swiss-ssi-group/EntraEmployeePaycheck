@@ -6,8 +6,84 @@
     await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(3));
 }
 
-<p>TODO S3</p>
+<table>
+    <thead>
+        <tr>
+            <th>Text</th>
+            <th>Nr</th>
+            <th>Anzahl</th>
+            <th>Ansatz</th>
+            <th>Beitrag CHF</th>
+        </tr>
+    </thead>
 
+    <tbody>
+        <tr>
+            <td>Bruttlohn</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>6720</td>
+        </tr>
+        <tr>
+            <td>AHV Abzug</td>
+            <td>6010</td>
+            <td>5.300%</td>
+            <td>6720.00</td>
+            <td>-356.16</td>
+        </tr>
+        <tr>
+            <td>ALV Abzug</td>
+            <td>6050</td>
+            <td>1.100%</td>
+            <td>6720.00</td>
+            <td>-73.92</td>
+        </tr>
+        <tr>
+            <td>NBUV Abzug</td>
+            <td>6110</td>
+            <td>0.456%</td>
+            <td>6720.00</td>
+            <td>-43.52</td>
+        </tr>
+        <tr>
+            <td>BVG Abzug</td>
+            <td>6240</td>
+            <td></td>
+            <td></td>
+            <td>-901.43</td>
+        </tr>
+        <tr>
+            <td>KTG Abzug</td>
+            <td>6110</td>
+            <td>0.255%</td>
+            <td>6720.00</td>
+            <td>-19.52</td>
+        </tr>
+
+        <tr>
+            <td><b>Total Nettolohn</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>5340.34</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<hr />
+
+<div class="row">
+    <div class="col col-12 col-md-auto mb-4 order-last order-md-first">
+        <b>Total Auszahlung am @DateTime.UtcNow.AddDays(-7).ToShortDateString()</b> <p>5340.34 CHF</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 col-md-auto mb-4 order-last order-md-first">
+        <b>Vergütung auf IBAN CH17 1920 2923 3988 2877 2932 5 der UBS</b>
+    </div>
+</div>
 
 <div class="row">
     <div class="col col-12 col-md-auto mb-4 order-last order-md-first">

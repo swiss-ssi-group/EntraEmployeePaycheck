@@ -247,10 +247,10 @@ div.active {
     cursor: pointer;
 }
 
-    .link-button:hover {
-        color: #e63329;
-    }
+.link-button:hover {
+    color: #e63329;
+}
 
-    .link-button.active {
-        color: #e63329;
-    }
+.link-button.active {
+    color: #e63329;
+}

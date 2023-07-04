@@ -1,0 +1,16 @@
+﻿@model EmployeePaycheck.Pages.Shared.PartialProcessNavigationModel
+
+<div class="stepper mt-6 mb-4">
+    <div class="step @(Model.ActiveStep == 1 ? "active" : string.Empty)" data-toggle="tooltip" data-placement="top" title="Enter Paycheck ID">
+        <span class="d-inline-block d-xl-none step-icon"><em class="fas fa-pencil-alt"></em></span>
+        <span class="step-text d-none d-xl-inline-block">Enter Paycheck ID</span>
+    </div>
+    <div class="step @(Model.ActiveStep == 2 ? "active" : string.Empty)" data-toggle="tooltip" data-placement="top" title="Verify">
+        <span class="d-inline-block d-xl-none step-icon"><em class="fas fa-user"></em></span>
+        <span class="step-text d-none d-xl-inline-block">Verify</span>
+    </div>
+    <div class="step @(Model.ActiveStep == 3 ? "active" : string.Empty)" data-toggle="tooltip" data-placement="top" title="Payroll">
+        <span class="d-inline-block d-xl-none step-icon"><em class="fas fa-clipboard-list"></em></span>
+        <span class="step-text d-none d-xl-inline-block">Payroll</span>
+    </div>
+</div>

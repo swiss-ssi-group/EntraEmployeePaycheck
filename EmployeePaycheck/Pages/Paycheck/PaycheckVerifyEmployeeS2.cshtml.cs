@@ -13,6 +13,9 @@ public class PaycheckVerifyEmployeeS2Model : PageModel
     [BindProperty]
     public string? AbortPortalUrl { get; set; } = "/Paycheck/PaycheckEnterIdS1";
 
+    [BindProperty]
+    public string? StatePresented { get; set; }
+
     public IActionResult OnGet()
     {
         return Page();

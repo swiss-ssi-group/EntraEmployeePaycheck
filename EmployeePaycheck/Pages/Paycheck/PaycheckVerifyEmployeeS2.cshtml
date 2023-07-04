@@ -8,7 +8,7 @@
 }
 
 <div style="text-align: center;">
-    <h1>Driving Licence VC presentation</h1>
+    <h1>Validate your employee status</h1>
 
     <button type="button" id="sign-in" class="btn btn-primary">VERIFY CREDENTIAL</button>
 
@@ -27,23 +27,21 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm">
+    <div class="row">   
+        <div style="width: 300px">
             <div id="qrcode" style="text-align: center"></div>
         </div>
-        <div class="col-sm"></div>
     </div>
 </div>
 
 <div id="pinCodeText" style="display: none"></div>
 
+<form method="post" id="verifyEmployeePaycheck" action="" novalidate>
+    <input type="hidden" required id="statePresented" />
+</form>
+
 <script src="qrcode.min.js" nonce="@nonce"></script>
 <script src="verifier.js" nonce="@nonce"></script>
-
-<form method="post" id="verifyEmployeePaycheck" action="" novalidate>
-
-</form>
 
 <div class="row">
     <div class="col col-12 col-md-auto mb-4 order-last order-md-first">

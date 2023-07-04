@@ -10,6 +10,9 @@ public class PaycheckDetailsS3Model : PageModel
     [BindProperty(SupportsGet = true)]
     public string? PaycheckId { get; set; }
 
+    [BindProperty]
+    public string? AbortPortalUrl { get; set; } = "/Paycheck/PaycheckEnterIdS1";
+
     public IActionResult OnGet()
     {
         return Page();

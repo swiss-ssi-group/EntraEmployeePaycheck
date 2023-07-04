@@ -2,6 +2,25 @@
 @using EmployeePaycheck.Pages.Shared
 @model EmployeePaycheck.Pages.Paycheck.PaycheckEnterIdS1Model
 
-@{ await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(1)); }
+@{
+    var nonce = HttpContext.GetNonce();
+    await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(1));
+}
 
 <p>TODO S1</p>
+
+<form method="post" id="paycheckEnterId" action="" novalidate>
+</form>
+
+<div class="row">
+    <div class="col col-12 col-md-auto mb-4 order-last order-md-first">
+        <a class="c-button-custom c-button-custom--inverted" href="@Model.AbortPortalUrl">Reset</a>
+    </div>
+    <div class="col col-12 col-md-auto mb-4 order-first order-md-last">
+        <button type="button" id="buttonPaycheckEnterId" value="Submit form" class="c-button-custom">Continue</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/stepperevents.js" asp-append-version="true" nonce="@nonce"></script>
+}

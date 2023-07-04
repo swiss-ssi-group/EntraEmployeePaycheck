@@ -10,6 +10,9 @@ public class PaycheckEnterIdS1Model : PageModel
     [BindProperty(SupportsGet = true)]
     public string? PaycheckId { get; set; }
 
+    [BindProperty]
+    public string? AbortPortalUrl { get; set; } = "/Paycheck/PaycheckEnterIdS1";
+
     public IActionResult OnGet()
     {
         return Page();
@@ -17,6 +20,7 @@ public class PaycheckEnterIdS1Model : PageModel
 
     public IActionResult OnPost()
     {
+        PaycheckId = "somethingfromform";
         return Redirect($"~/Paycheck/PaycheckVerifyEmployeeS2/{PaycheckId}");
     }
 }

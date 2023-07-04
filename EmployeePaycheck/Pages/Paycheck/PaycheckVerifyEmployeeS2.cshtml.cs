@@ -54,7 +54,6 @@ public class PaycheckVerifyEmployeeS2Model : PageModel
         };
 
         var userIdentity = new ClaimsIdentity(claims, "entraemployee");
-
         var userPrincipal = new ClaimsPrincipal(userIdentity);
 
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,

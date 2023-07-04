@@ -1,14 +1,17 @@
-var signIn = document.getElementById('sign-in');
-var signOut = document.getElementById('sign-out');
+
 var display = document.getElementById('display');
+var messageDisplay = document.getElementById('message');
+var subject = document.getElementById('subject');
 var qrcode = new QRCode("qrcode", {width: 300, height: 300 });
 var respPresentationReq = null;
 
-signIn.addEventListener('click', () => {
+subject.innerHTML = 'loading...';
+window.addEventListener('load', () => {
+    
     fetch('/api/verifier/presentation-request')
         .then(function (response) {
             response.text()
-                .catch(error => document.getElementById("message").innerHTML = error)
+                .catch(error => messageDisplay.innerHTML = error)
                 .then(function (message) {
                     respPresentationReq = JSON.parse(message);
                     if (/Android/i.test(navigator.userAgent)) {
@@ -42,7 +45,7 @@ signIn.addEventListener('click', () => {
                     document.getElementById('message-wrapper').style.display = "block";
                     document.getElementById('qrText').style.display = "none";
                     document.getElementById('qrcode').style.display = "none";
-                    document.getElementById('message').innerHTML = respMsg.message;
+                    messageDisplay.innerHTML = respMsg.message;
                 }
 
                 if (respMsg.status == 'presentation_verified') {
@@ -50,8 +53,9 @@ signIn.addEventListener('click', () => {
                     //document.getElementById('payload').innerHTML = "Payload: " + JSON.stringify(respMsg.payload);
 
                     document.getElementById('statePresented').value = respPresentationReq.id;
-                    document.getElementById('message').innerHTML = '';
-                    document.getElementById('subject').innerHTML = "Verified Employee";
+                    messageDisplay.innerHTML = '';
+
+                    subject.innerHTML = "Verified Employee";
                     clearInterval(checkStatus);
                 }
             }

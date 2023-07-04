@@ -1,22 +1,256 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.labeltext {
+    font-size: 20px !important;
+    color: black !important;
+    line-height: revert !important;
+}
+
+.rowsmall {
+}
+
+.zeropaddingleft {
+    padding-left: 0px !important;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.border-top {
+    border-top: 1px solid #e5e5e5;
 }
 
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.redText {
+    color: red !important;
+}
+
+#pattern {
+    height: 100%;
+    z-index: 2;
+    display: block;
+}
+
+input:not([type]),
+input[type="text"]:not(.browser-default),
+input[type="password"]:not(.browser-default),
+input[type="email"]:not(.browser-default),
+input[type="url"]:not(.browser-default),
+input[type="time"]:not(.browser-default),
+input[type="date"]:not(.browser-default),
+input[type="datetime"]:not(.browser-default),
+input[type="datetime-local"]:not(.browser-default),
+input[type="tel"]:not(.browser-default),
+input[type="number"]:not(.browser-default),
+input[type="search"]:not(.browser-default),
+textarea.materialize-textarea {
+    background-color: rgba(240, 240, 240, 0.9) !important;
+    font-size: 20px !important;
+    padding-left: 0.5em !important;
+}
+
+label {
+    font-size: 20px !important;
+}
+
+    label:not(.active) {
+        padding-left: 0.5em;
+    }
+
+.card-text {
+    margin-top: 24px;
+}
+
+.c-nav
+{
+    line-height: 32px;
+}
+
+.nav-icon-link {
+    font-size: 1.3rem;
+}
+
+.c-button-custom {
+    background-color: #e63329;
+    border: 1px solid #e63329;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+    .c-button-custom:hover,
+    .c-button-custom:active,
+    .c-button-custom:focus,
+    .c-button-custom--inverted {
+        background-color: #fff;
+        color: #e63329;
+        border: 1px solid #e63329;
+    }
+
+        .c-button-custom--inverted:hover,
+        .c-button-custom--inverted:active,
+        .c-button-custom--inverted:focus {
+            background-color: #e63329;
+            color: #fff;
+            border: 1px solid #e63329;
+        }
+
+.stepper div {
+    position: relative;
+    text-align: center;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 10px 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+    .stepper div:first-child {
+        padding: 10px 10px 10px 0px;
+    }
+
+/* front */
+div.step:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 20px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 25px solid transparent;
+    margin: -10px 0px 0 10px;
+}
+
+/* tail */
+div.step:not(:first-child):before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    border-top: 25px solid transparent;
+    border-left: 20px solid white;
+    border-bottom: 25px solid transparent;
+    margin: -10px 0px 0 0px;
+}
+
+div.step:first-child {
+    margin-left: 0;
+}
+
+div.active {
+    background-color: #e63329;
+    color: #fff;
+}
+
+    div.active:after {
+        border-left: 20px solid #e63329;
+    }
+
+.step-text {
+    display: inline-block;
+    width: 230px;
+}
+
+.step-icon {
+    padding: 0 20px;
+    width: 44px;
+}
+
+@media (min-width: 768px) {
+    .step-icon {
+        width: 120px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .link-button:hover {
+        color: #e63329;
+    }
+
+    .link-button.active {
+        color: #e63329;
+    }

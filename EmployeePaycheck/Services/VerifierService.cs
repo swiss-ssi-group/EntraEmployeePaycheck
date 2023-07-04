@@ -26,7 +26,7 @@ public class VerifierService
         payload.Callback.Url = $"{host}/api/verifier/presentationCallback";
         payload.Callback.Headers.ApiKey = _credentialSettings.VcApiCallbackApiKey;
 
-        payload.Registration.ClientName = "Verified Employee";
+        payload.Registration.ClientName = "VerifiedEmployee";
         payload.Authority = _credentialSettings.VerifierAuthority;
 
         var requestedCredentials = new RequestedCredentials

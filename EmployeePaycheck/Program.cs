@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using VerifierInsuranceCompany;
 
 namespace EmployeePaycheck;
@@ -15,6 +17,12 @@ public class Program
 
         builder.Services.AddHttpClient();
         builder.Services.AddDistributedMemoryCache();
+
+        builder.Services.AddAuthentication(options =>
+        {
+            options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        })
+        .AddCookie();
 
         // Add services to the container.
         builder.Services.AddRazorPages();
@@ -36,6 +44,7 @@ public class Program
 
         app.UseRouting();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllers();

@@ -48,11 +48,9 @@ signIn.addEventListener('click', () => {
                 if (respMsg.status == 'presentation_verified') {
                     //document.getElementById('message').innerHTML = respMsg.message;
                     //document.getElementById('payload').innerHTML = "Payload: " + JSON.stringify(respMsg.payload);
-                    //document.getElementById('subject').innerHTML = respMsg.name + " is a Verified Employee";
 
-                    document.getElementById('message').innerHTML = '';
                     document.getElementById('statePresented').value = respPresentationReq.id;
-
+                    document.getElementById('message').innerHTML = '';
                     document.getElementById('subject').innerHTML = "Verified Employee";
                     clearInterval(checkStatus);
                 }

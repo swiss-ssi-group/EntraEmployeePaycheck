@@ -6,7 +6,7 @@
 
 - 2023-07-04 Initial version
 
-## User secrets Issuer, Verify
+## User secrets and verify configuration
 
 ```
 {

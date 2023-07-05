@@ -28,15 +28,15 @@
 
 ```
 
+## Issue Entra Verified ID Employee credentials
+
+https://github.com/swiss-ssi-group/EntraVerifiedEmployee
+
 ## Local debugging, required for callback
 
 ```
 ngrok http https://localhost:5002
 ```
-
-## Issue Entra Verified ID Employee credentials
-
-https://github.com/swiss-ssi-group/EntraVerifiedEmployee
 
 ## Links
 

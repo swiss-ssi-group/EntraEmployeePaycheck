@@ -16,8 +16,6 @@ public class PaycheckEnterIdS1Model : PageModel
     [BindProperty]
     public string PersonID { get; set; } = string.Empty;
 
-
-    
     public IActionResult OnGet()
     {
         return Page();
@@ -30,7 +28,6 @@ public class PaycheckEnterIdS1Model : PageModel
             return Page();
         }
 
-        PaycheckId = "somethingfromform";
         return Redirect($"~/Paycheck/PaycheckVerifyEmployeeS2/{PersonID}");
     }
 }

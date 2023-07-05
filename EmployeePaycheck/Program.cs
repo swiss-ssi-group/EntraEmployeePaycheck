@@ -11,6 +11,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddScoped<VerifierService>();
+        builder.Services.AddScoped<ValidateUserAndPaycheckIdService>();
 
         builder.Services.Configure<CredentialSettings>(
              builder.Configuration.GetSection("CredentialSettings"));

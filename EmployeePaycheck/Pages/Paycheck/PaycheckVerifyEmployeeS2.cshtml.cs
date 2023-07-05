@@ -51,6 +51,7 @@ public class PaycheckVerifyEmployeeS2Model : PageModel
             new Claim("GivenName", credentialData!.Employee.GivenName, ClaimValueTypes.String, "damienbodsharepoint"),
             new Claim("Mail", credentialData!.Employee.Mail, ClaimValueTypes.String, "damienbodsharepoint"),
             new Claim("Surname", credentialData!.Employee.Surname, ClaimValueTypes.String, "damienbodsharepoint"),
+            new Claim("Photo", credentialData!.Employee.Photo, ClaimValueTypes.String, "damienbodsharepoint"),
         };
 
         var userIdentity = new ClaimsIdentity(claims, "entraemployee");

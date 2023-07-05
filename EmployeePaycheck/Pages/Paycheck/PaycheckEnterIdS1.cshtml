@@ -7,8 +7,14 @@
     await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(1));
 }
 
-
 <form method="post" id="paycheckEnterId" action="" novalidate>
+
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        <div class="alert alert-danger" role="alert">
+            @Html.ValidationSummary(false, null, new {@class = "text-danger h4"})
+        </div>
+    }
 
     <div class="card">
         <div class="card-content">
@@ -22,8 +28,6 @@
             </div>
         </div>
     </div>
-
-
 
 </form>
 

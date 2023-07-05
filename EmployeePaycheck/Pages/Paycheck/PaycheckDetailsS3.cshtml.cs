@@ -30,7 +30,9 @@ public class PaycheckDetailsS3Model : PageModel
             await HttpContext.SignOutAsync();
             return Redirect($"~/Paycheck/PaycheckError");
         }
-            
+
+        // Data should be fetched from a DB or an ERP service etc.
+
         return Page();
     }
 }

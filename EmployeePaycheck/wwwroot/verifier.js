@@ -1,11 +1,10 @@
 
 var display = document.getElementById('display');
-var messageDisplay = document.getElementById('message');
+var messageDisplay = document.getElementById('messageDisplay');
 var subject = document.getElementById('subject');
 var qrcode = new QRCode("qrcode", {width: 300, height: 300 });
 var respPresentationReq = null;
 
-subject.innerHTML = 'loading...';
 window.addEventListener('load', () => {
     
     fetch('/api/verifier/presentation-request')

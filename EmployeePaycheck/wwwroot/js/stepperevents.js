@@ -28,4 +28,13 @@ $(document).ready(function () {
         buttonVerifyEmployeePaycheckSubmit.onclick = verifyEmployeePaycheckSubmit;
     }
 
+    let showContinueToPackcheckData = document.getElementById('subject');
+
+    if (showContinueToPackcheckData) {
+        if (showContinueToPackcheckData.value == 'Verified Employee') {
+            document.getElementById("buttonVerifyEmployeePaycheck").style.display = 'block';
+        } else {
+            document.getElementById("buttonVerifyEmployeePaycheck").style.display = 'none';
+        }
+    }
 });

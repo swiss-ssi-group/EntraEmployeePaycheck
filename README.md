@@ -6,12 +6,12 @@
 
 - 2023-07-04 Initial version
 
-## User secrets Issuer, Verify
+## User secrets and verify configuration
 
 ```
 {
   "CredentialSettings": {
-    "Endpoint": "https://beta.did.msidentity.com/v1.0/{0}/verifiablecredentials/request",
+    "Endpoint": "https://verifiedid.did.msidentity.com/v1.0/verifiableCredentials/createPresentationRequest",
     "VCServiceScope": "bbb94529-53a3-4be5-a069-7eaf2712b826/.default",
     "Instance": "https://login.microsoftonline.com/{0}",
     "TenantId": "YOURTENANTID",
@@ -27,6 +27,10 @@
 }
 
 ```
+
+## Issue Entra Verified ID Employee credentials
+
+https://github.com/swiss-ssi-group/EntraVerifiedEmployee
 
 ## Local debugging, required for callback
 
@@ -62,5 +66,3 @@ https://dotnetthoughts.net/using-node-services-in-aspnet-core/
 https://identity.foundation/ion/explorer
 
 https://www.npmjs.com/package/ngrok
-
-https://github.com/microsoft/VerifiableCredentials-Verificatio

@@ -1,4 +1,4 @@
-﻿@page "{PaycheckId?}"
+﻿@page
 @using EmployeePaycheck.Pages.Shared
 @model EmployeePaycheck.Pages.Paycheck.PaycheckEnterIdS1Model
 
@@ -18,12 +18,12 @@
 
     <div class="card">
         <div class="card-content">
-            <span class="card-title">Person ID from payroll</span>
+            <span class="card-title">Paycheck ID from payroll</span>
 
             <div class="row card-text">
                 <div class="input-field col col-12 col-md-12">
-                    <input type="text" required asp-for="@Model.PersonID" id="PersonID" />
-                    <label for="PersonID">Person ID *</label>
+                    <input type="text" required asp-for="@Model.PaycheckId" id="PaycheckId" />
+                    <label for="PaycheckId">PaycheckId ID *</label>
                 </div>
             </div>
         </div>

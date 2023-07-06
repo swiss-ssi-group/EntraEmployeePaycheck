@@ -1,20 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace EmployeePaycheck.Pages.Paycheck;
 
 [AllowAnonymous]
 public class PaycheckEnterIdS1Model : PageModel
 {
-    [BindProperty(SupportsGet = true)]
-    public string? PaycheckId { get; set; }
-
     [BindProperty]
     public string? AbortPortalUrl { get; set; } = "/Paycheck/PaycheckEnterIdS1";
 
+    [Required]
     [BindProperty]
-    public string PersonID { get; set; } = string.Empty;
+    public string PaycheckId { get; set; } = string.Empty;
 
     public IActionResult OnGet()
     {
@@ -28,6 +27,6 @@ public class PaycheckEnterIdS1Model : PageModel
             return Page();
         }
 
-        return Redirect($"~/Paycheck/PaycheckVerifyEmployeeS2/{PersonID}");
+        return Redirect($"~/Paycheck/PaycheckVerifyEmployeeS2/{PaycheckId}");
     }
 }

@@ -4,6 +4,16 @@
 
 ## Deployment testing
 
+### Get onboarded to the Azure AD tenant
+
+Contact the HR, or your IT admin and ask nicely for an account.
+
+### Get your verified employee credential
+
+https://issueverifiableemployee.azurewebsites.net
+
+### View your paycheck using the verified employee credential
+
 https://employeepaycheck.azurewebsites.net
 
 ## History

@@ -9,8 +9,9 @@ function displayInit() {
 
 function displayGenerateQRCode() {
     console.log('displayGenerateQRCode');
+    document.getElementById('message-generate-vc-presentation').style.display = "none";
     document.getElementById('message-wrapper').style.display = "block";
-    document.getElementById('messageDisplay').innerHTML = 'Scan the QR Code using your wallet, once it is generated';
+    document.getElementById('messageDisplay').innerHTML = 'Scan the QR Code using your wallet to verify';
     document.getElementById('qrText').style.display = "block";
 }
 

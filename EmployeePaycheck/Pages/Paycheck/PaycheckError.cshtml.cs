@@ -14,7 +14,7 @@ public class PaycheckErrorModel : PageModel
 
     public IActionResult OnGet()
     {
-        ErrorMessage = $"Something went wrong: your paycheck ID: {PaycheckId}, for the demo, only P12345 works";
+        ErrorMessage = $"Something went wrong: your paycheck ID: '{PaycheckId}', only paycheck ID 'P12345' works for the demo";
         return Page();
     }
 }

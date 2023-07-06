@@ -37,13 +37,22 @@ function displayPresentationVerified() {
     document.getElementById("buttonVerifyEmployeePaycheck").style.display = 'block';
 }
 
+function displayError(error) {
+    console.log(error);
+    document.getElementById('message-error').style.display = "block";
+    document.getElementById('messageError').innerHTML = error;
+    document.getElementById('message-wrapper').style.display = "none";
+    document.getElementById('qrText').style.display = "none";
+    document.getElementById('qrcode').style.display = "none";  
+}
+
 window.addEventListener('load', () => {
     
     fetch('/api/verifier/presentation-request')
         .then(function (response) {
             displayInit();
             response.text()
-                .catch(error => document.getElementById('messageDisplay').innerHTML = error)
+                .catch(error => { displayError(error.message); })
                 .then(function (message) {
                     respPresentationReq = JSON.parse(message);
                     if (/Android/i.test(navigator.userAgent)) {
@@ -59,14 +68,14 @@ window.addEventListener('load', () => {
                         displayGenerateQRCode();
                         qrcode.makeCode(respPresentationReq.url);
                     }
-                }).catch(error => { console.log(error.message); })
-        }).catch(error => { console.log(error.message); })
+                }).catch(error => { displayError(error.message); })
+        }).catch(error => { displayError(error.message); })
 
     var checkStatus = setInterval(function () {
         if(respPresentationReq){
             fetch('api/verifier/presentation-response?id=' + respPresentationReq.id)
                 .then(response => response.text())
-                .catch(error => document.getElementById("messageDisplay").innerHTML = error)
+                .catch(error => { displayError(error.message); })
                 .then(response => {
                     if (response.length > 0) {
                         console.log(response)

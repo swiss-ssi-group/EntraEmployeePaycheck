@@ -1,18 +1,20 @@
 ﻿@page "{PaycheckId?}"
 @model EmployeePaycheck.Pages.Paycheck.PaycheckErrorModel
 
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-0 shadow-none mb-3">    
-    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
-        <div class="form-group">
-            <a class="c-button" asp-page="../Index">Back</a>
+<div id="message-error">
+    <div class="alert alert-danger" role="alert">
+        <div class="text-danger h4 validation-summary-errors" data-valmsg-summary="true">
+            <ul>
+                <li id="messageError">@Model.ErrorMessage</li>
+            </ul>
         </div>
-        
     </div>
-</nav>
+</div>
 
 <div class="row">
-    <div class="col-md-12">
-        <p>@Model.ErrorMessage</p>
+    <div class="col col-12 col-md-auto mb-4 order-last order-md-first">
+        <a class="c-button-custom c-button-custom--inverted" href="../Index">Back</a>
     </div>
+
 </div>

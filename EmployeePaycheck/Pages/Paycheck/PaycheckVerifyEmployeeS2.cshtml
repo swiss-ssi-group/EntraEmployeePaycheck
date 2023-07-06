@@ -44,9 +44,6 @@
     <input type="hidden" required id="statePresented" name="statePresented"/>
 </form>
 
-<script src="qrcode.min.js" nonce="@nonce"></script>
-<script src="verifier.js" nonce="@nonce"></script>
-
 <div class="row">
     <div class="col col-12 col-md-auto mb-4 order-last order-md-first">
         <a class="c-button-custom c-button-custom--inverted" href="@Model.AbortPortalUrl">Reset</a>
@@ -58,4 +55,6 @@
 
 @section Scripts {
     <script src="~/js/stepperevents.js" asp-append-version="true" nonce="@nonce"></script>
+    <script src="qrcode.min.js" nonce="@nonce"></script>
+    <script src="verifier.js" nonce="@nonce"></script>
 }

@@ -1,7 +1,6 @@
 ﻿@page "{PaycheckId}"
 @using EmployeePaycheck.Pages.Shared
 @model EmployeePaycheck.Pages.Paycheck.PaycheckVerifyEmployeeS2Model
-
 @{
     var nonce = HttpContext.GetNonce();
     await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(2));

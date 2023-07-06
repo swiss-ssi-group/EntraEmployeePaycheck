@@ -2,6 +2,7 @@
 @using EmployeePaycheck.Pages.Shared
 @model EmployeePaycheck.Pages.Paycheck.PaycheckDetailsS3Model
 @{
+    ViewData["Title"] = "Employee Paycheck Data";
     var nonce = HttpContext.GetNonce();
     await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(3));
 }

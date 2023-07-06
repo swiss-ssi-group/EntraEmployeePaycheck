@@ -2,6 +2,7 @@
 @using EmployeePaycheck.Pages.Shared
 @model EmployeePaycheck.Pages.Paycheck.PaycheckVerifyEmployeeS2Model
 @{
+    ViewData["Title"] = "Employee Paycheck - Verify Employee";
     var nonce = HttpContext.GetNonce();
     await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(2));
 }

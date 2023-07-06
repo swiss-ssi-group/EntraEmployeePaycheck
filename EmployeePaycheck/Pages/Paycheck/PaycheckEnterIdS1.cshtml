@@ -1,8 +1,8 @@
 ﻿@page
 @using EmployeePaycheck.Pages.Shared
 @model EmployeePaycheck.Pages.Paycheck.PaycheckEnterIdS1Model
-
 @{
+    ViewData["Title"] = "Employee Paycheck - Enter ID";
     var nonce = HttpContext.GetNonce();
     await Html.RenderPartialAsync("_PartialProcessNavigation", new PartialProcessNavigationModel(1));
 }

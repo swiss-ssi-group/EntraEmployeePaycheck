@@ -1,4 +1,4 @@
-﻿@page "{PaycheckId}"
+﻿@page "{PaycheckId?}"
 @model EmployeePaycheck.Pages.Paycheck.PaycheckErrorModel
 
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-0 shadow-none mb-3">    
@@ -13,6 +13,6 @@
 
 <div class="row">
     <div class="col-md-12">
-        <p>Error</p>
+        <p>@Model.ErrorMessage</p>
     </div>
 </div>

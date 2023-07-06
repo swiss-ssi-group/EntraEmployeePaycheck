@@ -25,10 +25,11 @@ public class PaycheckDetailsS3Model : PageModel
     public async Task<IActionResult> OnGetAsync()
     {
         var upn = HttpContext.User.FindFirst("RevocationId");
+        // Validate PaycheckId and VC claims 
         if (!_validateUserAndPaycheckIdService.PaycheckIdAndUserAreValid(upn!.Value, PaycheckId))
         {
             await HttpContext.SignOutAsync();
-            return Redirect($"~/Paycheck/PaycheckError");
+            return Redirect($"~/Paycheck/PaycheckError/{PaycheckId}");
         }
 
         // Data should be fetched from a DB or an ERP service etc.

@@ -20,7 +20,8 @@ function displayRequestRetrieved() {
     document.getElementById('message-wrapper').style.display = "block";
     document.getElementById('qrText').style.display = "none";
     document.getElementById('qrcode').style.display = "none";
-    document.getElementById('messageDisplay').innerHTML = respMsg.message;
+    console.log('VC API response message: ' + respMsg.message);
+    document.getElementById('messageDisplay').innerHTML = 'Please consent and share your data to complete verification';
 }
 
 function displayPresentationVerified() {
@@ -62,26 +63,26 @@ window.addEventListener('load', () => {
         }).catch(error => { console.log(error.message); })
 
     var checkStatus = setInterval(function () {
-            if(respPresentationReq){
-                fetch('api/verifier/presentation-response?id=' + respPresentationReq.id)
-                    .then(response => response.text())
-                    .catch(error => document.getElementById("messageDisplay").innerHTML = error)
-                    .then(response => {
-                        if (response.length > 0) {
-                            console.log(response)
-                            respMsg = JSON.parse(response);
-                            // QR Code scanned
-                            if (respMsg.status == 'request_retrieved') {
-                                displayRequestRetrieved();
-                            }
-
-                            if (respMsg.status == 'presentation_verified') {
-                                displayPresentationVerified();
-                                clearInterval(checkStatus);
-                            }
+        if(respPresentationReq){
+            fetch('api/verifier/presentation-response?id=' + respPresentationReq.id)
+                .then(response => response.text())
+                .catch(error => document.getElementById("messageDisplay").innerHTML = error)
+                .then(response => {
+                    if (response.length > 0) {
+                        console.log(response)
+                        respMsg = JSON.parse(response);
+                        // QR Code scanned
+                        if (respMsg.status == 'request_retrieved') {
+                            displayRequestRetrieved();
                         }
-                    })
-            }
+
+                        if (respMsg.status == 'presentation_verified') {
+                            displayPresentationVerified();
+                            clearInterval(checkStatus);
+                        }
+                    }
+                })
+        }
             
     }, 1500); //change this to higher interval if you use ngrok to prevent overloading the free tier service
 })

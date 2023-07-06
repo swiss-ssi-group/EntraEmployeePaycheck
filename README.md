@@ -2,6 +2,10 @@
 
 [![.NET](https://github.com/swiss-ssi-group/EntraEmployeePaycheck/actions/workflows/dotnet.yml/badge.svg)](https://github.com/swiss-ssi-group/EntraEmployeePaycheck/actions/workflows/dotnet.yml)
 
+## Deployment testing
+
+https://employeepaycheck.azurewebsites.net
+
 ## History
 
 - 2023-07-04 Initial version

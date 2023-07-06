@@ -4,11 +4,11 @@ var respPresentationReq = null;
 
 function displayInit() {
     console.log('displayInit');
+    document.getElementById('message-wrapper').style.display = "none";  
 }
 
 function displayGenerateQRCode() {
     console.log('displayGenerateQRCode');
-    document.getElementById('sign-in').style.visibility = "hidden";
     document.getElementById('qrText').style.display = "block";
 }
 
@@ -22,12 +22,15 @@ function displayRequestRetrieved() {
 
 function displayPresentationVerified() {
     console.log('displayPresentationVerified');
-    //document.getElementById('message').innerHTML = respMsg.message;
+    document.getElementById('message-wrapper').style.display = "block";
+    document.getElementById('message-wrapper-icon').style.display = "block";
+    document.getElementById('subject').innerHTML = "Verified Employee";
     //document.getElementById('payload').innerHTML = "Payload: " + JSON.stringify(respMsg.payload);
-
     document.getElementById('statePresented').value = respPresentationReq.id;
     document.getElementById('messageDisplay').innerHTML = '';
-    document.getElementById('subject').innerHTML = "Verified Employee";
+
+    // stepper control button
+    document.getElementById("buttonVerifyEmployeePaycheck").style.display = 'block';
 }
 
 window.addEventListener('load', () => {

@@ -76,7 +76,7 @@ public class VerifierController : Controller
                 var message = await res.Content.ReadAsStringAsync();
 
                 _log.LogError("Unsuccesfully called Request API {message}", message);
-                return BadRequest(new { error = "400", error_description = "Something went wrong calling the API: " });
+                return BadRequest(new { error = "400", error_description = message });
             }
 
             var errorResponse = await res.Content.ReadAsStringAsync();

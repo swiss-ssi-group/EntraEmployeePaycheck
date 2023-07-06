@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
         .then(function (response) {
             displayInit();
             response.text()
-                .catch(error => { displayError(error.message); })
+                .catch(error => { displayError(error); })
                 .then(function (message) {
                     respPresentationReq = JSON.parse(message);
                     if (/Android/i.test(navigator.userAgent)) {
@@ -65,17 +65,22 @@ window.addEventListener('load', () => {
                         window.location.replace(respPresentationReq.url);
                     } else {
                         console.log(`Not Android or IOS. Generating QR code encoded with ${message}`);
-                        displayGenerateQRCode();
-                        qrcode.makeCode(respPresentationReq.url);
+                        if (message.includes('error_description')) {
+                            displayError(message);
+                        }
+                        else {
+                            displayGenerateQRCode();
+                            qrcode.makeCode(respPresentationReq.url);
+                        }
                     }
-                }).catch(error => { displayError(error.message); })
-        }).catch(error => { displayError(error.message); })
+                }).catch(error => { displayError(error);  })
+        }).catch(error => { displayError(error); })
 
     var checkStatus = setInterval(function () {
         if(respPresentationReq){
             fetch('api/verifier/presentation-response?id=' + respPresentationReq.id)
                 .then(response => response.text())
-                .catch(error => { displayError(error.message); })
+                .catch(error => { displayError(error); })
                 .then(response => {
                     if (response.length > 0) {
                         console.log(response)

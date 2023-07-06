@@ -64,11 +64,12 @@ window.addEventListener('load', () => {
                         console.log(`iOS device! Using deep link (${respPresentationReq.url}).`);
                         window.location.replace(respPresentationReq.url);
                     } else {
-                        console.log(`Not Android or IOS. Generating QR code encoded with ${message}`);
+                       
                         if (message.includes('error_description')) {
                             displayError(message);
                         }
                         else {
+                            console.log(`Not Android or IOS. Generating QR code encoded with ${message}`);
                             displayGenerateQRCode();
                             qrcode.makeCode(respPresentationReq.url);
                         }

@@ -21,9 +21,9 @@ public class CacheData
 
     public static void AddToCache(string key, IDistributedCache cache, CacheData cacheData)
     {
-        var cacheExpirationInDays = 1;
+        var cacheExpirationInHours = 1;
         var options = new DistributedCacheEntryOptions()
-            .SetSlidingExpiration(TimeSpan.FromDays(cacheExpirationInDays));
+            .SetSlidingExpiration(TimeSpan.FromHours(cacheExpirationInHours));
         cache.SetString(key, System.Text.Json.JsonSerializer.Serialize(cacheData), options);
     }
 

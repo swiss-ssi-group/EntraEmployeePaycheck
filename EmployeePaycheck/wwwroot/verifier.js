@@ -57,9 +57,7 @@ window.addEventListener('load', () => {
                     respPresentationReq = JSON.parse(message);
                     if (/Android/i.test(navigator.userAgent)) {
                         console.log(`Android device! Using deep link (${respPresentationReq.url}).`);
-                        window.location.href = respPresentationReq.url; setTimeout(function () {
-                            window.location.href = "https://play.google.com/store/apps/details?id=com.azure.authenticator";
-                        }, 10000);
+                        window.location.href = respPresentationReq.url;
                     } else if (/iPhone/i.test(navigator.userAgent)) {
                         console.log(`iOS device! Using deep link (${respPresentationReq.url}).`);
                         window.location.replace(respPresentationReq.url);

@@ -254,3 +254,7 @@ div.active {
 .link-button.active {
     color: #e63329;
 }
+
+div.payroll td {
+    padding: 5px 5px !important;
+}

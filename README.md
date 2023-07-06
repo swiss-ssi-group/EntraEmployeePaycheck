@@ -57,28 +57,36 @@ ngrok http https://localhost:5002
 ## Links
 
 
-https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/
+https://github.com/swiss-ssi-group/AzureADVerifiableCredentialsAspNetCore
 
-https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/get-started-request-api
+https://learn.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview
+
+https://ssi-start.adnovum.com/data
+
+https://github.com/e-id-admin/public-sandbox-trustinfrastructure#14
+
+https://openid.net/specs/openid-connect-self-issued-v2-1_0.html
+
+https://identity.foundation/jwt-vc-presentation-profile/
+
+https://learn.microsoft.com/en-us/azure/active-directory/verifiable-credentials/verifiable-credentials-standards
 
 https://github.com/Azure-Samples/active-directory-verifiable-credentials-dotnet
 
-https://www.microsoft.com/de-ch/security/business/identity-access-management/decentralized-identity-blockchain
+https://aka.ms/mysecurityinfo
 
-https://didproject.azurewebsites.net/docs/issuer-setup.html
+https://fontawesome.com/
 
-https://didproject.azurewebsites.net/docs/credential-design.html
+https://developer.microsoft.com/en-us/graph/graph-explorer?tenant=damienbodsharepoint.onmicrosoft.com
 
-https://github.com/Azure-Samples/active-directory-verifiable-credentials
+https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0
 
-https://identity.foundation/
+https://github.com/Azure-Samples/VerifiedEmployeeIssuance
 
-https://www.w3.org/TR/vc-data-model/
+https://github.com/AzureAD/microsoft-identity-web/blob/jmprieur/Graph5/src/Microsoft.Identity.Web.GraphServiceClient/Readme.md#replace-the-nuget-packages
 
-https://daniel-krzyczkowski.github.io/Azure-AD-Verifiable-Credentials-Intro/
+https://docs.microsoft.com/azure/app-service/deploy-github-actions#configure-the-github-secret
 
-https://dotnetthoughts.net/using-node-services-in-aspnet-core/
+https://issueverifiableemployee.azurewebsites.net/
 
-https://identity.foundation/ion/explorer
-
-https://www.npmjs.com/package/ngrok
+https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/

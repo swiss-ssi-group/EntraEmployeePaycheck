@@ -18,8 +18,8 @@ https://employeepaycheck.azurewebsites.net
 
 ## History
 
+- 2023-07-27 Updated packages
 - 2023-07-06 Update flows and added deployment
-
 - 2023-07-04 Initial version
 
 ## User secrets and verify configuration

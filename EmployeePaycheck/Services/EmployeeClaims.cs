@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
 namespace EmployeePaycheck.Services;
 
@@ -18,6 +18,8 @@ public class EmployeeClaims
     public string DisplayName { get; set; } = string.Empty;
     [JsonPropertyName("preferredLanguage")]
     public string PreferredLanguage { get; set; } = string.Empty;
-    [JsonPropertyName("userPrincipalName")]
+
+    //[JsonPropertyName("userPrincipalName")]
+    [JsonPropertyName("revocationId")]
     public string RevocationId { get; set; } = string.Empty;
 }

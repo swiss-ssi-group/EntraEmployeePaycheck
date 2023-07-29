@@ -66,6 +66,8 @@ public class PaycheckVerifyEmployeeS2Model : PageModel
                 AllowRefresh = false
             });
 
+        // TODO clean up cache.
+
         return Redirect($"~/Paycheck/PaycheckDetailsS3/{PaycheckId}");
     }
 }

@@ -66,7 +66,7 @@ public class PaycheckVerifyEmployeeS2Model : PageModel
                 AllowRefresh = false
             });
 
-        // TODO clean up cache.
+        CacheData.RemoveFromCache(StatePresented, _distributedCache);
 
         return Redirect($"~/Paycheck/PaycheckDetailsS3/{PaycheckId}");
     }

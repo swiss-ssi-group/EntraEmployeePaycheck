@@ -2,6 +2,7 @@
 
 [![.NET](https://github.com/swiss-ssi-group/EntraEmployeePaycheck/actions/workflows/dotnet.yml/badge.svg)](https://github.com/swiss-ssi-group/EntraEmployeePaycheck/actions/workflows/dotnet.yml)
 
+[Use a Microsoft Entra Verified ID Employee credential to view paycheck data](https://damienbod.com/2023/08/07/use-a-microsoft-entra-verified-id-employee-credential-to-view-paycheck-data/)
 ## Deployment testing
 
 ### Get onboarded to the Azure AD tenant

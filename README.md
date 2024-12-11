@@ -19,6 +19,7 @@ https://employeepaycheck.azurewebsites.net
 
 ## History
 
+- 2024-12-11 .NET 9, updated packages
 - 2023-07-27 Updated packages
 - 2023-07-06 Update flows and added deployment
 - 2023-07-04 Initial version

@@ -1,6 +1,5 @@
 using System.Text.Json.Serialization;
 using EmployeePaycheck.Services;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.Extensions.Caching.Distributed;
 
 namespace VerifierInsuranceCompany.Services;

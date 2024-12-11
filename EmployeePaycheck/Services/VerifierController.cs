@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Globalization;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
 using VerifierInsuranceCompany.Services;
-using System.Text.Json;
-using System.Globalization;
-using Microsoft.Extensions.Caching.Distributed;
 
 namespace VerifierInsuranceCompany;
 
@@ -97,7 +97,7 @@ public class VerifierController : Controller
 
         try
         {
-            if (verifierCallbackResponse != null  && verifierCallbackResponse.RequestStatus == VerifierConst.RequestRetrieved)
+            if (verifierCallbackResponse != null && verifierCallbackResponse.RequestStatus == VerifierConst.RequestRetrieved)
             {
                 var cacheData = new CacheData
                 {
@@ -152,8 +152,11 @@ public class VerifierController : Controller
             if (data != null)
             {
                 Debug.WriteLine("check if there was a response yet: " + data);
-                return new ContentResult { ContentType = "application/json",
-                    Content = JsonSerializer.Serialize(data) };
+                return new ContentResult
+                {
+                    ContentType = "application/json",
+                    Content = JsonSerializer.Serialize(data)
+                };
             }
 
             return Ok();

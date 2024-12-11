@@ -11,7 +11,7 @@ public class ValidateUserAndPaycheckIdService
         // This can be specific to your ERP system etc.
 
         // simi check, only accept requests for "P12345" and any upn
-        if(paycheckId == "P12345")
+        if (paycheckId == "P12345")
             return true;
 
         return false;

@@ -17,7 +17,7 @@ public class Program
         builder.Services.AddScoped<ValidateUserAndPaycheckIdService>();
 
         builder.Services.Configure<CredentialSettings>(
-             builder.Configuration.GetSection("CredentialSettings"));
+        builder.Configuration.GetSection("CredentialSettings"));
 
         builder.Services.AddHttpClient();
         builder.Services.AddDistributedMemoryCache();
@@ -28,7 +28,6 @@ public class Program
         })
         .AddCookie();
 
-        // Add services to the container.
         builder.Services.AddRazorPages();
 
         var app = builder.Build();

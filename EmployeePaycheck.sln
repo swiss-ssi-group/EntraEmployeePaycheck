@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_solutionItmes", "_solutionItmes", "{47789FDB-AEBB-4C46-B7FD-5A44682F96B1}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		.github\workflows\EmployeePaycheck.yml = .github\workflows\EmployeePaycheck.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
